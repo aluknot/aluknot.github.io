@@ -1,11 +1,11 @@
 ### GENERAL SETTINGS ###
 
 # Site settings
-title: SOLID.
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-analytics: #Google analytics code in the format XX-nnnnnnnn-n
+title: "Laureano Miceli"
+description: "Desarrollo Web independiente para tu proyecto o compañia, de la forma que quieras, con los colores que mas te gustan"
+analytics: "UA-3415672-3"
 baseurl: "" #important: start with /
-url: "http://yourdomain.com"
+url: "http://aluknot.github.io/"
 
 # Build settings
 markdown: kramdown
@@ -29,22 +29,24 @@ social:
   - title: dribbble
     url:
   - title: facebook
-    url:
+    url: "https://www.facebook.com/laureano.miceli"
   - title: twitter
     url: 
   - title: instagram
-    url: 
+    url: "http://instagram.com/laureanomiceli"
   - title: tumblr
     url: 
+  - title: linkedin
+    url: "https://www.linkedin.com/profile/view?id=132854387"
     
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
 address:
   - lines: 
-    - Some Ave, 987,
-    - 23890, New York,
-    - United States.
-email: hello@solidtheme.com
-tel: +34 8493-4893
+    - Buenos Aires,
+    - Capital Federal (Almagro),
+    - Argentina.
+email: nv.aluknot@gmail.com
+tel: +54 1136001801
 
 
 ### GENERAL DATA FOR VARIOUS LOCATIONS ###
@@ -100,7 +102,7 @@ clients:
     img: client04.png
     
 # Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
-about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+about: "Soy un desarrollador web freelance, especializado principalmente en el Front-End pero con conocimiento de Back-End. No dudes en contactarme para consultarme cualquier duda"
 
 # Testimonial content. Shown on Home and About page. 
 testimonial:
