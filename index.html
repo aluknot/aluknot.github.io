@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Home
+title: Web
 permalink: /
 ---
 
@@ -9,32 +9,31 @@ permalink: /
         <div class="row centered">
             <div class="col-lg-8 col-lg-offset-2">
                 <h3>FACTORES IMPORTANTES</h3>
-                <div class="hline"></div>
                 <div class="spacing"></div>
             </div>
             <div class="col-md-3">
                 <i class="fa fa-heart-o"></i>
                 <h4>Causa</h4>
                 <p>Gracias a la solicitud de alguno de los servicios que ofrezco contribuis con una causa importante para mi</p>
-                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+                <p><br/><a href="#" class="btn btn-theme">Mas Info</a></p>
             </div>
             <div class="col-md-3">
                 <i class="fa fa-flask"></i>
                 <h4>Tecnologia</h4>
                 <p>Codigo valido, limpio y actualizado, ultimas tendencias en tecnologia de desarrollo web y diseño web</p>
-                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+                <p><br/><a href="#" class="btn btn-theme">Mas Info</a></p>
             </div>
             <div class="col-md-3">
                 <i class="fa fa-trophy"></i>
                 <h4>Otros</h4>
                 <p>Gestores de contenidos (CMS), Social Media, Marketing online, Newsletter, Diseño Grafico y mas.</p>
-                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+                <p><br/><a href="#" class="btn btn-theme">Mas Info</a></p>
             </div>
             <div class="col-md-3">
                 <i class="fa fa-trophy"></i>
                 <h4>Calidad</h4>
                 <p>Se busca la calidad profesional con la que se muestra el proyecto, siendo lo primero que se percibe.</p>
-                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+                <p><br/><a href="#" class="btn btn-theme">Mas Info</a></p>
             </div>
         </div>
     </div><! --/container -->
@@ -45,13 +44,13 @@ permalink: /
 <div class="container mtb">
     <div class="row">
         <div class="col-lg-4 col-lg-offset-1">
-            <h4>More About Our Agency.</h4>
+            <h4>Mas sobre mi.</h4>
             <p>{{ site.about }}</p>
-            <p><br/><a href="{{ "/about/" | prepend: site.baseurl }}" class="btn btn-theme">More Info</a></p>
+            <p><br/><a href="{{ "/about/" | prepend: site.baseurl }}" class="btn btn-theme">Mas Info</a></p>
         </div>
 
         <div class="col-lg-3">
-            <h4>Frequently Asked</h4>
+            <h4>Preguntas Frecuentes</h4>
             <div class="hline"></div>
             {% for post in site.categories['question'] %} 
                 <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
@@ -59,7 +58,7 @@ permalink: /
         </div>
 
         <div class="col-lg-3">
-            <h4>Latest Posts</h4>
+            <h4>Ultimas Publicaciones</h4>
             <div class="hline"></div>
             {% for post in site.categories['blog'] limit:5 %} 
                 <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}.</a></p>
