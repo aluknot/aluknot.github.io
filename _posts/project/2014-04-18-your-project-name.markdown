@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  "FUTURO PROYECTO"
-date:   00-00-00 16:54:46
+date:   01-01-2014 16:54:46
 author: Laureano Miceli
 categories:
 - proyecto
