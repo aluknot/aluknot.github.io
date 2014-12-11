@@ -26,12 +26,16 @@ colors:  #in hex code if not noted else
 
 # Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
 social:
+  - title: google-plus
+    url: "https://plus.google.com/+LaureanoMiceli"
   - title: facebook
     url: "https://www.facebook.com/laureano.miceli"
   - title: instagram
     url: "http://instagram.com/laureanomiceli"
   - title: linkedin
     url: "https://www.linkedin.com/profile/view?id=132854387"
+  - title: github-square
+    url: "https://github.com/laureano"
     
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
 address:

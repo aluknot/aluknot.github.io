@@ -17,14 +17,14 @@ layout: default
         </div>
         <div class="col-lg-4 col-lg-offset-1">
             <div class="spacing"></div>
-            <h4>Detalles del proyecto/h4>
+            <h4>Detalles del proyecto</h4>
             <div class="hline"></div>
-            <p><b>Fecha:</b> {{ page.date | date: "%b %-d, %Y" }}</p>
             <p><b>Autor:</b> {{ page.author }}</p>
+            <p><b>Fecha:</b> {{ page.date | date: "%-d %b, %Y" }}</p>
             <p><b>Categorias:</b> {{ page.categories }}</p>
-            <p><b>Tags:</b> Flat, UI, Development</p>
+            <p><b>Etiquetas:</b> {{ page.tags }}</p>
             <p><b>Cliente:</b> {{ page.client }}</p>
-            <p><b>Pagina:</b> <a href="{{ page.website }}">{{ page.website }}</a></p>
+            <p><b>Pagina:</b> <a href="{{ page.website }}" target="_blank">{{ page.website }}</a></p>
         </div>
     </div><! --/row -->
 </div><! --/container -->
