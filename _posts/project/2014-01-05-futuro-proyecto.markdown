@@ -5,10 +5,14 @@ date:   01-01-2014 16:54:46
 author: Laureano Miceli
 categories:
 - proyecto
-img: portfolio_00.jpg
+img: default4.jpg
 thumb: thumb00.jpg
 carousel:
-- default.jpg
+- default1.jpg
+- default2.jpg
+- default3.jpg
+- default4.jpg
+- default5.jpg
 client: ninguno
 website: http://google.com
 tags: etiqueta1, etiqueta2
