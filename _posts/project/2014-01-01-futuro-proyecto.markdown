@@ -5,7 +5,7 @@ date:   01-01-2014 16:54:46
 author: Laureano Miceli
 categories:
 - proyecto
-img: default3.jpg
+img: default5.jpg
 thumb: thumb00.jpg
 carousel:
 - default1.jpg
