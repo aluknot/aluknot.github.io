@@ -8,7 +8,7 @@ categories:
 img: portfolio_00.jpg
 thumb: thumb00.jpg
 carousel:
-- portfolio_00.jpg
+- default.jpg
 client: ninguno
 website: http://google.com
 tags: etiqueta1, etiqueta2
