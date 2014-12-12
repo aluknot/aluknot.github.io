@@ -6,7 +6,7 @@ author: Laureano Miceli
 categories:
 - proyecto
 img: portfolio_01.jpg
-thumb: thumb02.jpg
+thumb: thumb01.jpg
 carousel:
 - laureano01.jpg
 - laureano02.jpg
