@@ -9,7 +9,7 @@
     <h4>Suscribite</h4>
     <div class="hline"></div>
         <p>
-            <p class="rss-subscribe">Suscribite a este blog <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>.</p>
+    <p class="rss-subscribe">Suscribite a este blog <a href="http://feeds.feedburner.com/LaureanoMiceli">via RSS</a>.</p>
         </p>
     <div class="spacing"></div>
     <h4>Categorias</h4>
@@ -35,16 +35,17 @@
             {% endfor %} 
         </ul>
 
-    <div class="hline"></div>
-    {% include google/adsense_block.html %}
+        {% if site.safe == false %}
+            <div style="width: 336px; height:280px; background: blue;">TOP AD GOES HERE</div>
+        {% else %}
+            {% include google/adsense_block.html %}
+        {% endif %}
 
-    <div class="spacing"></div>
-
-    <h4>Etiquetas Populares</h4>
+<!--<h4>Etiquetas Populares</h4>
     <div class="hline"></div>
     <p>
     {% for category in site.categories %}{% unless category.first == "blog" or category.first == "project" or category.first == "question" %}
             <a class="btn btn-theme" href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}" role="button">{{ category | first | capitalize }} ({{ category | last | size }})</a>	         
         {% endunless %}{% endfor %}
-    </p>
+    </p> -->
 </div>

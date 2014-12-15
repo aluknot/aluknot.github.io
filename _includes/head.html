@@ -8,12 +8,20 @@
 
     <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
 
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url | append: "/" }}" />
+    <meta property="og:image" content="{{ "/assets/img/blog/" | prepend: site.baseurl }}{{ page.img }}" />
+
     <!-- Bootstrap core CSS -->
     <link href="{{ "/assets/css/bootstrap.css" | prepend: site.baseurl }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ "/assets/css/style.css" | prepend: site.baseurl }}" rel="stylesheet">
     <link href="{{ "/assets/css/font-awesome.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+    <link href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}" rel="stylesheet">
+    <link href="{{ "/assets/css/modals.css" | prepend: site.baseurl }}" rel="stylesheet">
+    <link href="{{ "/assets/css/rrssb.css" | prepend: site.baseurl }}" rel="stylesheet">
     
     <!-- Custom CSS -->
     <!--<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">-->

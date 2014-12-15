@@ -3,9 +3,18 @@
 # Site settings
 title: "Laureano Miceli"
 description: "Desarrollo Web independiente para tu proyecto o compañia, de la forma que quieras, con los colores que mas te gustan"
-analytics: "UA-3415672-3"
+analytics: "UA-57642150-1"
 baseurl: "" #important: start with /
-url: "http://aluknot.github.io/"
+url: "http://aluknot.github.io"
+
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/feed.xml"
+    include_posts:
+        - "/index.html"
+
+highlighter: rouge
 
 # Build settings
 markdown: kramdown
@@ -35,7 +44,7 @@ social:
   - title: linkedin
     url: "https://www.linkedin.com/profile/view?id=132854387"
   - title: github-square
-    url: "https://github.com/laureano"
+    url: "https://github.com/aluknot"
     
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
 address:

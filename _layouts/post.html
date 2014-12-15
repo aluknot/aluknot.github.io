@@ -16,13 +16,33 @@ layout: default
             {{ content }}
 
             <div class="spacing"></div>
-            <!-- <h6>SHARE:</h6>
-            <p class="share">
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-tumblr"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>		 		
-            </p> -->
+
+            {% assign tagStr = '' %}
+            {% capture url %}{{ site.url }}{{ page.url }}{% endcapture %}
+            {% if page.shortUrl != null %}
+            {% assign url = page.shortUrl %}
+            {% for tag in page.etiquetas %}
+            {% capture tagStr %}{{ tagStr }},{{ tag }}{% endcapture %}
+            {% endfor %}
+            {% endif %}
+            <hr />
+            <h6>Compartir en redes sociales:</h6>
+            <div class="share">
+                <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ url }}&via=laureanomiceli&hashtags={{ tagStr }}" target="_blank" title="Share this post on Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?t={{ page.title }}&u={{ url }}" target="_blank" title="Share this post on Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank" title="Share this post on Google Plus"><i class="fa fa-google-plus"></i></a>
+                <a href="http://www.linkedin.com/shareArticle?mini=true&title={{ page.title }}&url={{ url }}&source=http%3a%2f%2fzhangwenli.com" target="_blank" title="Share this post on LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+            {% include socialbuttons.html %}
+
+            <div class="spacing"></div>
+
+            <hr/>
+            <h2>Comentarios:</h2>
+            <div class="fb-comments" data-href="{{ site.url }}{{ page.url | append: "/" }}" data-numposts="5" data-colorscheme="light" data-width="706"></div>
+            <!-- <div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5" data-colorscheme="light"></div> -->
+
         </div><! --/col-lg-8 -->
         
         {% include sidebar.html %}

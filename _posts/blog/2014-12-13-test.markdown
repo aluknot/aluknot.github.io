@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Titulo"
+date: 11-12-2014 16:54:46
+author: Laureano Miceli
+categories:
+- blog
+- categoria1
+- categoria2
+img: post03.jpg
+thumb: thumb03.jpg
+comments: yes
+---
+
+<b>test</b>
