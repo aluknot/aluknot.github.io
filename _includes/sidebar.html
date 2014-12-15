@@ -34,12 +34,11 @@
             </li>
             {% endfor %} 
         </ul>
-
-        {% if site.safe == false %}
-            <div style="width: 336px; height:280px; background: blue;">TOP AD GOES HERE</div>
-        {% else %}
-            {% include google/adsense_block.html %}
-        {% endif %}
+        <div class="spacing"></div>
+        <hr />
+        <div class="spacing"></div>
+        <!--<div style="width: 336px; height:280px; background: blue;">TOP AD GOES HERE</div>-->
+        {% include google/adsense_sidebar.html %}
 
 <!--<h4>Etiquetas Populares</h4>
     <div class="hline"></div>
