@@ -7,13 +7,16 @@ layout: default
 <div class="container mtb">
     <div class="row">
         <! -- SINGLE POST -->
-        <div class="col-lg-8">
+        <div class="col-lg-8" itemscope itemtype="http://schema.org/Article">
             <! -- Blog Post  -->
-            <p><img class="img-responsive" src="{{ "/assets/img/blog/" | prepend: site.baseurl }}{{ page.img }}"></p>
-            <a href="{{ page.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ page.title }}</h3></a>
-            <p><csmall>{{ page.date | date: "%-d %b, %Y" }}. | Por: {{ page.author }}</csmall></p>
+            <p><img class="img-responsive" itemprop="image" src="{{ "/assets/img/blog/" | prepend: site.baseurl }}{{ page.img }}"></p>
+            <a href="{{ page.url | prepend: site.baseurl }}" itemprop="url"><h3 class="ctitle" itemprop="name">{{ page.title }}</h3></a>
+            <meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">
+            <p><csmall>{{ page.date | date: "%-d %b, %Y" }}. | Por: <span itemprop="author creator name copyrightHolder" itemscope itemtype="http://schema.org/Person"><a href="https://plus.google.com/u/0/b/117739570173448926309/+AluknotGithubIo/about" rel="publisher" itemprop="url">{{ page.author }}</a></span></csmall></p>
               
-            {{ content }}
+            <span itemprop="articleBody">
+                {{ content }}
+            </span>
 
             <div class="spacing"></div>
 
@@ -44,7 +47,6 @@ layout: default
             <hr/>
             <h2>Comentarios:</h2>
             <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-numposts="5" data-colorscheme="light" data-width="706"></div>
-            <!-- <div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5" data-colorscheme="light"></div> -->
 
         </div><! --/col-lg-8 -->
         

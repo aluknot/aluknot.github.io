@@ -2,16 +2,67 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Laureano Miceli">
-    <link rel="shortcut icon" href="{{ "/assets/ico/favicon.ico" | prepend: site.baseurl }}">
+    <meta name="copyright" content="Laureano Miceli">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
+    <link rel="icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
 
     <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
 
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url | append: "/" }}" />
-    <meta property="og:image" content="{{ "/assets/img/blog/" | prepend: site.baseurl }}{{ page.img }}" />
+    <meta name="twitter:site" content="@laureanomiceli">
+    <meta name="twitter:creator" content="@laureanomiceli">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="og:site_name" content="{{ site.title }}">
+    {% if page.title %}
+        <meta property="og:title" content="{{ page.title }}">
+        <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+        <meta property="og:title" content="{{ site.title }}">
+        <meta name="twitter:title" content="{{ site.title }}">
+    {% endif %}
+    {% if page.path contains '_posts' %}
+        <meta property="og:description" content="{{ page.content | strip_html | truncatewords: 200 }}">
+        <meta itemprop="description" content="{{ page.content | strip_html | truncatewords: 200 }}">
+        <meta name="description" content="{{ page.content | strip_html |truncatewords: 160 }}">
+        <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 200 }}">
+        <meta property="og:type" content="article">
+    {% else %}
+        <meta property="og:description" content="{{ site.description }}">
+        <meta itemprop="description" content="{{ site.description }}">
+        <meta name="description" content="{{ site.description }}">
+        <meta name="twitter:description" content="{{ site.description }}">
+        <meta property="og:type" content="website">
+    {% endif %}
+    {% if page.url %}
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+        <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    {% endif %}
+    {% if page.date %}
+        <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+        <meta property="article:author" content="{{ site.url }}/about/">
+    {% endif %}
+    {% if page.img %}
+        <meta property="og:image" content="{{ "/assets/img/blog/" | prepend: site.url }}{{ page.img }}">
+        <meta name="twitter:image:src" content="{{ "/assets/img/blog/" | prepend: site.url }}{{ page.img }}">
+    {% else %}
+        <meta property="og:image" content="{{ "/assets/img/browser3.png" | prepend: site.url }}">
+        <meta name="twitter:image:src" content="{{ "/assets/img/browser3.png" | prepend: site.url }}">
+    {% endif %}
+
+    {% if page.categories %}
+        {% for category in page.categories limit:1 %}
+            <meta property="article:section" content="{{ category }}">
+        {% endfor %}
+    {% endif %}
+
+    {% if page.etiquetas %}
+        {% for tag in page.etiquetas %}
+            <meta property="article:tag" content="{{ tag }}">
+            <meta itemprop="keywords" content="{{ tag }}">
+        {% endfor %}
+    {% endif %}
 
     <!-- Bootstrap core CSS -->
     <link href="{{ "/assets/css/bootstrap.css" | prepend: site.baseurl }}" rel="stylesheet">
@@ -22,10 +73,6 @@
     <link href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}" rel="stylesheet">
     <link href="{{ "/assets/css/modals.css" | prepend: site.baseurl }}" rel="stylesheet">
     <link href="{{ "/assets/css/rrssb.css" | prepend: site.baseurl }}" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
-    <link rel="icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
 
     <!-- Custom CSS -->
     <!--<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">-->
