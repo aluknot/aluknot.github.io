@@ -5,7 +5,7 @@ date: 15-12-2014 06:00
 author: Laureano Miceli
 img: post01.jpg
 thumb: default.jpg
-shortUrl: http://adf.ly/vH1kP
+shortUrl: http://goo.gl/MmIk4Q
 etiquetas:
 - blog
 - inauguracion

@@ -1,11 +1,11 @@
 ---
 layout: project
 title:  "FUTURO PROYECTO"
-date:   01-01-2014 16:54:46
+date:   01-01-2010 16:54:46
 author: Laureano Miceli
 categories:
 - proyecto
-img: default2.jpg
+img: default3.jpg
 thumb: thumb00.jpg
 carousel:
 - default1.jpg
